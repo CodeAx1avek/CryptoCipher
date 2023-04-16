@@ -1,0 +1,256 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Crypt-Cipher</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <!-- <link href="img/favicon.png" rel="icon"> -->
+  <!-- <link href="img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+
+  <!-- Google Fonts -->
+  {% comment %} <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet"> {% endcomment %}
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html">The Crypto-Cipher Arena</a></h1>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#Program">Program</a></li>
+          <!-- <li><a class="nav-link scrollto" href="/">Services</a></li> -->
+          <li><a class="nav-link   scrollto" href="https://codeax1avek.github.io/portfolio/">Portfolio</a></li>
+          <!-- <li><a class="nav-link scrollto" href="/">Team</a></li>
+          <li><a class="nav-link scrollto" href="/">Contact</a></li> -->
+          <!-- <li><a class="getstarted scrollto" href="/">Get Started</a></li> -->
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+{% comment %} 
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+          <h1>The Crypto-Cipher Arena</h1>
+          <h2>Author Rishabh Gupta collab with CodeAx1</h2>
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="#Program" class="btn-get-started scrollto">Get Started</a>
+            <a href="https://www.youtube.com/watch?v=SjkcPaWeKqc&pp=ygUHY29kZWF4MQ%3D%3D" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="img/hero-img.png" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero --> {% endcomment %}
+
+  <main id="main">
+
+   
+    <!-- ======= Program Us Section ======= -->
+    <section id="Program" class="Program">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Program Code</h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6">
+          
+            <h1>The Crypto-Cipher Arena</h1>
+            <form method="post">
+              {% csrf_token %}
+              <label for="msg">Message:</label>
+              <input type="text" name="msg" required><br><br>
+              <label for="key">Key:</label>
+              <input type="text" name="key" required><br><br>
+              <label for="mode">Mode:</label>
+              <input type="radio" name="mode" value="e" checked> Encrypt
+              <input type="radio" name="mode" value="d"> Decrypt<br><br>
+              <input type="submit" value="Submit">
+            </form>
+            {% if result %}
+              <h2>Result:</h2>
+              <p>{{ result }}</p>
+            {% endif %}
+  <br>
+  {% comment %} <label for="result">The Result:</label>
+  <input type="text" id="result" name="result" value="{{ result }}" ><br><br> {% endcomment %}
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Program Us Section -->
+
+   
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+  
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Codeax1</h3>
+            <p>
+              Mumbai Thane <br>
+              Maharashtra, 400612<br>
+              India <br><br>
+              <strong>Phone:</strong> Rishabh<br>
+              <strong>Email:</strong> indcrpt612@proton.me<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Program us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Hacking </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Scripting</a></li>
+            
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <p>Insta CodeAx1</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>CodeAx1</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
+        Designed by <a href="https://codeax1avek.github.io/E-commerce/index.html">CodeAx1</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>The Crypto-Cipher Arena</title>
+</head>
+<body>
+  <h1>The Crypto-Cipher Arena</h1>
+  <form method="post">
+    {% csrf_token %}
+    <label for="msg">Message:</label>
+    <input type="text" id="msg" name="msg"><br><br>
+    <label for="key">Key (Only Integer):</label>
+    <input type="text" id="key" name="key"><br><br>
+    <label for="mode">Mode (e for encrypt, d for decrypt):</label>
+    <input type="text" id="mode" name="mode"><br><br>
+    <input type="submit" value="Show Message">
+  </form>
+  <br>
+  <label for="result">The Result:</label>
+  <input type="text" id="result" name="result" value="{{ result }}" ><br><br>
+</body>
+</html> -->
